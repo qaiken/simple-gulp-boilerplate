@@ -1,2 +1,2 @@
-module.exports = (item = 'Bob') ->
+module.exports = (item = 'testing') ->
   console.log "#{item}"
