@@ -9,7 +9,6 @@
 var gulp = require('gulp'),
   livereload = require('gulp-livereload'),
   browserify = require('gulp-browserify'),
-  sourcemaps = require('gulp-sourcemaps'),
   srcs = require('../srcs');
 
 gulp.task('js', function() {
@@ -17,8 +16,6 @@ gulp.task('js', function() {
     .pipe(browserify({
       debug: true
     }))
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('js'))
     .pipe(livereload());
 });
