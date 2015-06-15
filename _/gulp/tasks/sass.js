@@ -8,14 +8,12 @@ var gulp = require('gulp'),
   srcs = require('../srcs');
 
 gulp.task('sass', function() {
-  gulp.src(srcs.sass.main)
+  return gulp.src(srcs.sass.main)
     .pipe(sourcemaps.init())
     .pipe(globbing({
       extensions: ['.scss', '.sass']
     }))
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass())
     .on('error', gutil.log)
     .pipe(autoprefixer({
       browsers: [

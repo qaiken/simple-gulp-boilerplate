@@ -5,11 +5,14 @@ module.exports = {
   },
   js: {
     all: '_/scripts/**/*.js',
-    main: '_/scripts/app.js'
+    main: '_/scripts/app.js',
+    production: 'js/app.js'
   },
   sass: {
     all: '_/scss/**/*.scss',
-    main: '_/scss/*.scss'
+    main: '_/scss/*.scss',
+    css: './css/*.css',
+    cssDir: './css/'
   },
   img: {
     all: '_/img/**/*.*'

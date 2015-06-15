@@ -4,7 +4,7 @@ var gulp = require('gulp'),
   srcs = require('../srcs');
 
 gulp.task('coffee', function() {
-  gulp.src(srcs.coffee.all)
+  return gulp.src(srcs.coffee.all)
     .pipe(coffee({bare: true})
       .on('error', gutil.log))
     .pipe(gulp.dest('_/scripts'));
